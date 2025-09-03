@@ -4,7 +4,21 @@
     "href": "index.html",
     "title": "Exploring and Experimenting With LLMs",
     "section": "",
-    "text": "Angelica’s daily blogging journal\n\n\n\nLLMs\n\nTesting this blog\n\n\n\nsharing thoughts in my life\n\n\n\n\n\nAug 31, 2025\n\n\nAngelica\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "```\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/003_information/secondblog.html",
+    "href": "posts/003_information/secondblog.html",
+    "title": "Angelica's Explorations with LLMs: My Daily Blog.com!",
+    "section": "",
+    "text": "Cell In[3], line 1\n    ---\n       ^\nSyntaxError: invalid syntax"
+  },
+  {
+    "objectID": "posts/001_first_post/personal_info.html",
+    "href": "posts/001_first_post/personal_info.html",
+    "title": "```",
+    "section": "",
+    "text": "title: “Get To Know Me!” description: “Testing Blogging” author: “Angelica” date: “9/3/2025” categories: - Family - Friends - Academics - Interests —\n\n\nHello! My name is Angelica and this first blog post is going to be getting to know a little bit about me while I explore how to use this platform haha! My experience with data science/coding comes from PHYS1100: Foundations of Data Science, which I took last semester as well as some other coding experience I did in high school.\n\n## My Family\n\nMy parents are from China, but me and my two older sisters were born here which makes us second generation. My older sisters both live in New York City now after graduating from college. This photo is from June from my middle sister's college graduation in Evanston, Illinois. I loveee Chicago!\n\nWe also have a dog named Minnie! She's a goldendoodle and turning 11 this year. I miss her a lot in college.\n\n::: {#fd3a85a7-7385-4908-a347-ad935b3e16f8 .cell execution_count=9}\n``` {.python .cell-code}\nfrom IPython.display import Image\nImage('family.JPG')\n\n\n\n\n\n\n\n:::\n\nfrom IPython.display import Image\nImage(\"minnie.jpg\")"
   },
   {
     "objectID": "posts/000_test_post/index.html",
@@ -19,13 +33,6 @@
     "title": "A test post",
     "section": "",
     "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
-  },
-  {
-    "objectID": "posts/002_Hello_world/hello_world.html",
-    "href": "posts/002_Hello_world/hello_world.html",
-    "title": "Angelica’s daily blogging journal",
-    "section": "",
-    "text": "print('hello! this is my first line of code.')\n\nhello! this is my first line of code."
   },
   {
     "objectID": "about.html",
