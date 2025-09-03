@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Exploring and Experimenting With LLMs",
     "section": "",
-    "text": "```\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "My First Blog Post!\n\n\n\nFamily\n\nAcademics\n\nInterests\n\n\n\nGet to Know Me\n\n\n\n\n\nSep 3, 2025\n\n\nAngelica\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/003_information/secondblog.html",
@@ -16,9 +16,30 @@
   {
     "objectID": "posts/001_first_post/personal_info.html",
     "href": "posts/001_first_post/personal_info.html",
-    "title": "```",
+    "title": "My First Blog Post!",
     "section": "",
-    "text": "title: “Get To Know Me!” description: “Testing Blogging” author: “Angelica” date: “9/3/2025” categories: - Family - Friends - Academics - Interests —\n\n\nHello! My name is Angelica and this first blog post is going to be getting to know a little bit about me while I explore how to use this platform haha! My experience with data science/coding comes from PHYS1100: Foundations of Data Science, which I took last semester as well as some other coding experience I did in high school.\n\n## My Family\n\nMy parents are from China, but me and my two older sisters were born here which makes us second generation. My older sisters both live in New York City now after graduating from college. This photo is from June from my middle sister's college graduation in Evanston, Illinois. I loveee Chicago!\n\nWe also have a dog named Minnie! She's a goldendoodle and turning 11 this year. I miss her a lot in college.\n\n::: {#fd3a85a7-7385-4908-a347-ad935b3e16f8 .cell execution_count=9}\n``` {.python .cell-code}\nfrom IPython.display import Image\nImage('family.JPG')\n\n\n\n\n\n\n\n:::\n\nfrom IPython.display import Image\nImage(\"minnie.jpg\")"
+    "text": "Hello! My name is Angelica and this first blog post is going to be getting to know a little bit about me while I explore how to use this platform! My experience with data science/coding comes from PHYS1100: Foundations of Data Science, which I took last semester as well as some other coding experience I did in high school."
+  },
+  {
+    "objectID": "posts/001_first_post/personal_info.html#my-family",
+    "href": "posts/001_first_post/personal_info.html#my-family",
+    "title": "My First Blog Post!",
+    "section": "My Family",
+    "text": "My Family\nMy parents are from China, but me and my two older sisters were born here which makes us second generation. My older sisters both live in New York City now after graduating from college. This photo is from June from my middle sister’s college graduation in Evanston, Illinois. I loveee Chicago!\nWe also have a dog named Minnie! She’s a goldendoodle and turning 11 this year. I miss her a lot!"
+  },
+  {
+    "objectID": "posts/001_first_post/personal_info.html#academics",
+    "href": "posts/001_first_post/personal_info.html#academics",
+    "title": "My First Blog Post!",
+    "section": "Academics",
+    "text": "Academics\nHere at Penn, I’m studying Health and Societies with a concentration in Healthcare Markets and Finance and a minor in Data Science and Analytics. I hope to explore the healthcare system and work towards fixing health disparities and improve access and quality, perhaps through healthcare data analytics!"
+  },
+  {
+    "objectID": "posts/001_first_post/personal_info.html#interests",
+    "href": "posts/001_first_post/personal_info.html#interests",
+    "title": "My First Blog Post!",
+    "section": "Interests",
+    "text": "Interests\nI love competitive swimming as I’ve swam my whole life. I also am a big foodie and love trying new resturants! My favorite shows are Friends, How I Met Your Mother, funny sit coms like that. I’m super excited to learm more about LLMs and AI in this class!"
   },
   {
     "objectID": "posts/000_test_post/index.html",
