@@ -1,8 +1,8 @@
 ---
-title: Learning from different LLM prompts
+title: My Experience In COMM4190
 image: profile.jpg
 about:
   template: jolla
 ---
 
-About this blog
+Angelica Hu
