@@ -1,5 +1,5 @@
 ---
-title: Exploring and Experimenting With LLMs
+title: My Journal: Exploring and Experimenting With LLMs
 listing:
   contents: posts
   sort: date desc
