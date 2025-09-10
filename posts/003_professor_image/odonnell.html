@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Angelica">
+<meta name="dcterms.date" content="2025-09-09">
+<meta name="description" content="Feel Better Professor O’Donnell!">
 
-<title>My Journal of Exploring and Experimenting With LLMs – Angelica’s Explorations with LLMs: My Daily Blog.com!</title>
+<title>Testing Image Analysis – Angelica’s Explorations with LLMs: My Daily Blog.com!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bf64fc2651e53dd6e43b82efe2824e6c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-bf64fc2651e53dd6e43b82efe2824e6c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,77 +70,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Angelica’s Explorations with LLMs: My Daily Blog.com!</span>
     </a>
   </div>
@@ -150,7 +93,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">My Experience In COMM4190</span></a>
   </li>  
   <li class="nav-item compact">
@@ -173,196 +116,69 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Journal of Exploring and Experimenting With LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Testing Image Analysis</h1>
+                  <div>
+        <div class="description">
+          Feel Better Professor O’Donnell!
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">prompting</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Angelica </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 9, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TXklMjBQcm9maWxl">My Profile <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p><img src="test_image.jpg" width="50%"></p>
+<p>I hope you are feeling better Professor O’Donnell when you read this and are recovering well! I tried some different prompts running the above pic which was provided on Canvas through the image-to-text API call in Jupyterhub. I was surprised to find some of the different responses that were output depending on which model the image was run through.</p>
+<section id="the-prompt-describe-this-image." class="level2">
+<h2 class="anchored" data-anchor-id="the-prompt-describe-this-image.">The Prompt: “Describe this image.”</h2>
+<section id="responses" class="level3">
+<h3 class="anchored" data-anchor-id="responses">Responses:</h3>
+<ul>
+<li><p>gpt 4.0: “The image shows a person wearing a neck brace and looking at the camera. They have some visible injuries on their face, including cuts and bruises. Their right hand is bandaged, and they are holding it up with three fingers extended. The background appears to be indoors with a door and some light coming through.”</p></li>
+<li><p>anthropic/claude-3.5-sonnet: “This appears to be a selfie taken from a low angle, showing someone wearing what looks like a VR headset or similar head-mounted device. The person is wearing a light-colored shirt and appears to have some substance or marks on their face. There’s also what appears to be a hand with a cloth or towel visible in the upper right corner of the image. The photo seems to be taken indoors, with a light-colored wall or ceiling visible in the background.”</p></li>
+<li><p>Google: Gemini 2.5 Flash: “This image is a close-up, selfie-style portrait of an adult male who appears to have recently sustained injuries. The man is looking directly at the camera with a neutral expression. His face shows several signs of injury: there are visible scrapes and scabs on his forehead, particularly above his left eyebrow. His nose has noticeable bruising and scabbing. His lips appear swollen, and there are dark scabs or stitches visible on his lower lip and chin area. He is wearing a white and grey cervical collar or neck brace around his neck. His right hand is raised into the upper right portion of the frame, and it is wrapped in a white, textured bandage or gauze, with his fingers slightly spread. He is wearing a light pink t-shirt, and a dark green design resembling pine trees is visible on the lower left side of the shirt. The background is an indoor setting with light-colored (beige/off-white) walls. To the right, part of a white door frame and a window are visible, through which bright natural light is entering. A small, light-colored sensor is attached to the top of the door frame. The ceiling is also visible at the top of the frame.”</p></li>
+</ul>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1757541161332" data-listing-reading-time-sort="1" data-listing-word-count-sort="97">
-<div class="thumbnail"><a href="./posts/technical.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/test_image.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/technical.html" class="no-external">1. Text generation</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/technical.html" class="no-external">
-
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im">from</span> openai <span class="im">import</span> OpenAI</span>
-<span id="cb1-2"><span class="im">import</span> os</span>
-<span id="cb1-3"><span class="im">import</span> base64</span>
-<span id="cb1-4"><span class="im">import</span> requests</span>
-<span id="cb1-5"></span>
-<span id="cb1-6"><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
-<span id="cb1-7"><span class="co"># Load API key</span></span>
-<span id="cb1-8">_ <span class="op">=</span> load_dotenv()</span></code></pre></div>
-
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/technical.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ3Byb21wdGluZw==" data-listing-date-sort="1757376000000" data-listing-file-modified-sort="1757541161326" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="406">
-<div class="thumbnail"><a href="./posts/003_professor_image/odonnell.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/003_professor_image/test_image.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_professor_image/odonnell.html" class="no-external">Testing Image Analysis</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/003_professor_image/odonnell.html" class="no-external">
-<p>Feel Better Professor O’Donnell!</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_professor_image/odonnell.html" class="no-external">
-<div class="listing-date">
-Sep 9, 2025
-</div>
-<div class="listing-author">
-Angelica
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TXklMjBQcm9maWxl" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1757541161325" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="244">
-<div class="thumbnail"><a href="./posts/001_first_post/personal_info.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/001_first_post/family.JPG"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_first_post/personal_info.html" class="no-external">My First Blog Post!</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TXklMjBQcm9maWxl'); return false;">My Profile</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_first_post/personal_info.html" class="no-external">
-<p>Get to Know Me</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_first_post/personal_info.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Angelica
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcw==" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1757541161326" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="196">
-<div class="thumbnail"><a href="./posts/002_wolfram_article/wolfram.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_wolfram_article/screenshot.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_wolfram_article/wolfram.html" class="no-external">The Wolfram Article</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_wolfram_article/wolfram.html" class="no-external">
-<p>Takeaways and Observations</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_wolfram_article/wolfram.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Angelica
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1757541161320" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
