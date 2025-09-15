@@ -1,5 +1,5 @@
 ---
-title: "My Journal of Exploring and Experimenting With LLMs"
+title: "Welcome to My Blog!"
 listing:
   contents: posts
   sort: "date desc"
