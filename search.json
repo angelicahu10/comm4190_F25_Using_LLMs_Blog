@@ -4,7 +4,7 @@
     "href": "troubleshoot.html",
     "title": "My Explorations With LLMs",
     "section": "",
-    "text": "!grep -Rn --include=\"*.qmd\" \"about:\" .\n\n./.ipynb_checkpoints/about-checkpoint.qmd:4:about:\n./about.qmd:4:about:"
+    "text": "!grep -Rn --include=\"*.qmd\" \"about:\" .\n\n./.ipynb_checkpoints/about-checkpoint.qmd:4:about:\n./about.qmd:4:about:\n\n\n\n!nl -ba about.qmd | sed -n '1,40p'\n!nl -ba ./.ipynb_checkpoints/about-checkpoint.qmd | sed -n '1,40p'\n\n     1  ---\n     2  title: \"About\"\n     3  image: profile.jpg\n     4  about:\n     5    template: jolla\n     6  ---\n     7  \n     8  Hi! My name is Angelica and I'm a current sophomore at the University of Pennsylvania studying Health & Societies, concentrating in Healthcare Markets and Finance. I'm also minoring in Neuroscience & Healthcare Management, and Data Science and Analytics.\n     9  \n    10  Angelica Hu\n     1  ---\n     2  title: About\n     3  image: profile.jpg\n     4  about:\n     5    template: jolla\n     6  ---\n     7  \n     8  About this blog\n\n\n\n!rm -rf ./.ipynb_checkpoints\n\n\n!printf \".ipynb_checkpoints/\\n\" &gt; .quartoignore\n!printf \"\\n.ipynb_checkpoints/\\n\" &gt;&gt; .gitignore\n\n\n!rm -rf ./_site\n!rm -rf ./.quarto\n\n\n!grep -Rn --include=\"*.qmd\" --include=\"*.yml\" --include=\"*.yaml\" '^about:\\s\\S' . || true\n\n\n!grep -RnP '\\t' --include=\"*.qmd\" --include=\"*.yml\" --include=\"*.yaml\" . || true\n\n\n!git add -A\n!git commit -m \"Clean checkpoints, ignore them; clear Quarto cache; confirm about: mapping\"\n!git push\n\n[main 67675f1] Clean checkpoints, ignore them; clear Quarto cache; confirm about: mapping\n 4 files changed, 58 insertions(+), 1 deletion(-)\n create mode 100644 .quartoignore\n create mode 100644 troubleshoot.ipynb\nEnumerating objects: 9, done.\nCounting objects: 100% (9/9), done.\nDelta compression using up to 16 threads\nCompressing objects: 100% (5/5), done.\nWriting objects: 100% (6/6), 1.04 KiB | 355.00 KiB/s, done.\nTotal 6 (delta 3), reused 0 (delta 0), pack-reused 0\nremote: Resolving deltas: 100% (3/3), completed with 3 local objects.\nTo https://github.com/angelicahu10/comm4190_F25_Using_LLMs_Blog.git\n   17eeece..67675f1  main -&gt; main"
   },
   {
     "objectID": "technical.html",
@@ -81,7 +81,7 @@
     "href": "posts/003_professor_image/odonnell.html",
     "title": "Testing Image Analysis",
     "section": "",
-    "text": "I hope you are feeling better Professor O’Donnell when you read this and are recovering well! I tried some different prompts running the above pic which was provided on Canvas through the image-to-text API call in Jupyterhub. I was surprised to find some of the different responses that were output depending on which model the image was run through."
+    "text": "I hope you are feeling better Professor O’Donnell when you read this and are recovering well! I tried some different prompts running the below pic which was provided on Canvas through the image-to-text API call in Jupyterhub. I was surprised to find some of the different responses that were output depending on which model the image was run through."
   },
   {
     "objectID": "posts/003_professor_image/odonnell.html#the-prompt-describe-this-image.",
@@ -116,6 +116,6 @@
     "href": "index.html",
     "title": "Welcome to My Blog!",
     "section": "",
-    "text": "Testing Image Analysis\n\n\n\nLLMs\n\nprompting\n\n\n\nFeel Better Professor O’Donnell!\n\n\n\n\n\nSep 9, 2025\n\n\nAngelica\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Blog Post!\n\n\n\nMy Profile\n\n\n\nGet to Know Me\n\n\n\n\n\nSep 3, 2025\n\n\nAngelica\n\n\n\n\n\n\n\n\n\n\n\n\nThe Wolfram Article\n\n\n\nLLMs\n\n\n\nTakeaways and Observations\n\n\n\n\n\nSep 3, 2025\n\n\nAngelica\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "Testing Image Analysis\n\n\n\nLLMs\n\nPrompting\n\n\n\nFeel Better Professor O’Donnell!\n\n\n\n\n\nSep 9, 2025\n\n\nAngelica\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Blog Post!\n\n\n\nMy Profile\n\n\n\nGet to Know Me\n\n\n\n\n\nSep 3, 2025\n\n\nAngelica\n\n\n\n\n\n\n\n\n\n\n\n\nThe Wolfram Article\n\n\n\nLLMs\n\n\n\nTakeaways and Observations\n\n\n\n\n\nSep 3, 2025\n\n\nAngelica\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nPrompting\n\nLogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
   }
 ]

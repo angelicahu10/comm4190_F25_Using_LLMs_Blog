@@ -166,6 +166,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ./about.qmd:4:about:</code></pre>
 </div>
 </div>
+<div id="abd472b7-f398-4dff-af08-762b4bf4f5b5" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>nl <span class="op">-</span>ba about.qmd <span class="op">|</span> sed <span class="op">-</span>n <span class="st">'1,40p'</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>nl <span class="op">-</span>ba .<span class="op">/</span>.ipynb_checkpoints<span class="op">/</span>about<span class="op">-</span>checkpoint.qmd <span class="op">|</span> sed <span class="op">-</span>n <span class="st">'1,40p'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     1  ---
+     2  title: "About"
+     3  image: profile.jpg
+     4  about:
+     5    template: jolla
+     6  ---
+     7  
+     8  Hi! My name is Angelica and I'm a current sophomore at the University of Pennsylvania studying Health &amp; Societies, concentrating in Healthcare Markets and Finance. I'm also minoring in Neuroscience &amp; Healthcare Management, and Data Science and Analytics.
+     9  
+    10  Angelica Hu
+     1  ---
+     2  title: About
+     3  image: profile.jpg
+     4  about:
+     5    template: jolla
+     6  ---
+     7  
+     8  About this blog</code></pre>
+</div>
+</div>
+<div id="da427263-74df-4ba2-bfcd-0a605f996764" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm <span class="op">-</span>rf .<span class="op">/</span>.ipynb_checkpoints</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="4cc95ffc-b4fb-4028-9fe6-dae5ba7f6d0f" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>printf <span class="st">".ipynb_checkpoints/</span><span class="ch">\n</span><span class="st">"</span> <span class="op">&gt;</span> .quartoignore</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>printf <span class="st">"</span><span class="ch">\n</span><span class="st">.ipynb_checkpoints/</span><span class="ch">\n</span><span class="st">"</span> <span class="op">&gt;&gt;</span> .gitignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="69c0a3f0-db86-41e4-846d-b61a807d892b" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm <span class="op">-</span>rf .<span class="op">/</span>_site</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm <span class="op">-</span>rf .<span class="op">/</span>.quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="deba332f-25e9-4cef-92ae-318e92870742" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>grep <span class="op">-</span>Rn <span class="op">--</span>include<span class="op">=</span><span class="st">"*.qmd"</span> <span class="op">--</span>include<span class="op">=</span><span class="st">"*.yml"</span> <span class="op">--</span>include<span class="op">=</span><span class="st">"*.yaml"</span> <span class="st">'^about:</span><span class="er">\</span><span class="st">s</span><span class="er">\</span><span class="st">S'</span> . <span class="op">||</span> true</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="a30be8f2-3a6f-4df8-aae0-050f4f6ae815" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>grep <span class="op">-</span>RnP <span class="st">'</span><span class="ch">\t</span><span class="st">'</span> <span class="op">--</span>include<span class="op">=</span><span class="st">"*.qmd"</span> <span class="op">--</span>include<span class="op">=</span><span class="st">"*.yml"</span> <span class="op">--</span>include<span class="op">=</span><span class="st">"*.yaml"</span> . <span class="op">||</span> true</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="348ab8ff-6d3f-4241-8e57-a211dd60affc" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git add <span class="op">-</span>A</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git commit <span class="op">-</span>m <span class="st">"Clean checkpoints, ignore them; clear Quarto cache; confirm about: mapping"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[main 67675f1] Clean checkpoints, ignore them; clear Quarto cache; confirm about: mapping
+ 4 files changed, 58 insertions(+), 1 deletion(-)
+ create mode 100644 .quartoignore
+ create mode 100644 troubleshoot.ipynb
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.04 KiB | 355.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/angelicahu10/comm4190_F25_Using_LLMs_Blog.git
+   17eeece..67675f1  main -&gt; main</code></pre>
+</div>
+</div>
 
 
 
