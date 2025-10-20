@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,10 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c5fede4b813c474e2e1576c3d2cfb839.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-b99f487086fa9555d44c4d6901a13082.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -173,24 +173,43 @@ ul.task-list li input[type="checkbox"] {
 <p>I can still remember being a Senior in high school, stressing about the complex college application process. That summer going into the last year was spent brainstorming ideas for the common application essay. Knowing that you could write about anything almost made it even harder to hone down on one topic. Thus, I decided to play around and see how an LLM (anthropic/claude-3.5-sonnet) could help make this process a little easier, helping to brainstorm potential prompts and create a college list as well. It’s almost like it is a private $100,000 college counseler. I played around and tried my best to give clear directions and prompts to optimize the LLM’s output according to the PEGAI reading on Chapter 3.</p>
 <section id="user" class="level3">
 <h3 class="anchored" data-anchor-id="user">USER</h3>
+<blockquote class="blockquote">
 <p>Pretend you are a college counselor. I want help compiling a college list and come up with an idea for the common application essay. Generate a bullet-point list of 10 colleges/universities in the United States with their acceptance rate and a 5 bullet-point list of potential college essay topics.</p>
+</blockquote>
 </section>
 <section id="assistant" class="level3">
 <h3 class="anchored" data-anchor-id="assistant">ASSISTANT</h3>
+<blockquote class="blockquote">
 <p>As a college counselor, I’ll help you with a college list and essay topics. However, to provide more personalized recommendations, it would be helpful to know your: - Academic interests/intended major - GPA and test scores - Geographic preferences - Financial considerations - Extracurricular activities</p>
+</blockquote>
+<blockquote class="blockquote">
 <p>Nevertheless, here’s a diverse list of colleges with varying selectivity:</p>
+</blockquote>
+<blockquote class="blockquote">
 <p>Colleges/Universities: • Stanford University (CA) - 4% acceptance rate • University of Michigan (MI) - 20% acceptance rate • Boston University (MA) - 14% acceptance rate • University of Wisconsin-Madison (WI) - 60% acceptance rate • Northeastern University (MA) - 18% acceptance rate • University of Texas at Austin (TX) - 32% acceptance rate • University of Virginia (VA) - 21% acceptance rate • Purdue University (IN) - 60% acceptance rate • New York University (NY) - 12% acceptance rate • University of Washington (WA) - 56% acceptance rate</p>
+</blockquote>
+<blockquote class="blockquote">
 <p>Potential Essay Topics: • A significant challenge you’ve overcome and how it shaped your character • An experience that sparked your intellectual curiosity or passion for learning • A meaningful community service project or leadership experience • A cultural tradition or family value that has influenced your worldview • A moment of failure that led to personal growth and self-discovery</p>
+</blockquote>
+<blockquote class="blockquote">
 <p>Would you like to share more about your background so I can provide more tailored suggestions?</p>
+</blockquote>
 </section>
 <section id="user-1" class="level3">
 <h3 class="anchored" data-anchor-id="user-1">USER</h3>
+<blockquote class="blockquote">
 <p>I don’t feel comfortable providing personal information.</p>
+</blockquote>
 </section>
 <section id="assistant-1" class="level3">
 <h3 class="anchored" data-anchor-id="assistant-1">ASSISTANT</h3>
+<blockquote class="blockquote">
 <p>I completely understand and respect your privacy. The college list I provided includes a good mix of: - Large research universities - Urban and suburban locations - Different geographic regions - Varying acceptance rates (from highly selective to more accessible) - Both private and public institutions</p>
+</blockquote>
+<blockquote class="blockquote">
 <p>For the essay topics, here’s some additional context on why these topics work well:</p>
+</blockquote>
+<blockquote class="blockquote">
 <ol type="1">
 <li>“A significant challenge you’ve overcome”</li>
 </ol>
@@ -199,6 +218,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Demonstrates personal growth</li>
 <li>Reveals character and determination</li>
 </ul>
+</blockquote>
+<blockquote class="blockquote">
 <ol start="2" type="1">
 <li>“An experience that sparked intellectual curiosity”</li>
 </ol>
@@ -207,6 +228,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Reveals your academic passions</li>
 <li>Demonstrates intellectual vitality</li>
 </ul>
+</blockquote>
+<blockquote class="blockquote">
 <ol start="3" type="1">
 <li>“A meaningful community service/leadership experience”</li>
 </ol>
@@ -215,6 +238,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Demonstrates impact on others</li>
 <li>Reveals values and priorities</li>
 </ul>
+</blockquote>
+<blockquote class="blockquote">
 <ol start="4" type="1">
 <li>“A cultural tradition/family value”</li>
 </ol>
@@ -223,6 +248,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Reveals personal background</li>
 <li>Demonstrates understanding of influences</li>
 </ul>
+</blockquote>
+<blockquote class="blockquote">
 <ol start="5" type="1">
 <li>“A moment of failure”</li>
 </ol>
@@ -231,35 +258,93 @@ ul.task-list li input[type="checkbox"] {
 <li>Demonstrates ability to learn from mistakes</li>
 <li>Reveals maturity and self-reflection</li>
 </ul>
+</blockquote>
+<blockquote class="blockquote">
 <p>Remember that the best essays are: - Personal and specific - Show rather than tell - Authentic to your voice - Reveal something not found elsewhere in your application - Well-written but not overly formal</p>
+</blockquote>
+<blockquote class="blockquote">
 <p>Would you like me to elaborate on any of these points?</p>
+</blockquote>
 </section>
 <section id="user-2" class="level3">
 <h3 class="anchored" data-anchor-id="user-2">USER</h3>
+<blockquote class="blockquote">
 <p>Please provide specific topics instead of essay question ideas. See an example below: * a sports injury that caused an athlete to quit their sport</p>
+</blockquote>
+<blockquote class="blockquote">
 <ul>
-<li><p>a job that a student loves and how it’s influenced them</p></li>
-<li><p>a student’s background and culture and how that shapes their identity</p></li>
-<li><p>an extended metaphor about the letter ‘s’</p></li>
+<li>a job that a student loves and how it’s influenced them</li>
 </ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>a student’s background and culture and how that shapes their identity</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>an extended metaphor about the letter ‘s’</li>
+</ul>
+</blockquote>
 </section>
 <section id="assistant-2" class="level3">
 <h3 class="anchored" data-anchor-id="assistant-2">ASSISTANT</h3>
+<blockquote class="blockquote">
 <p>Here are 10 specific essay topics:</p>
+</blockquote>
+<blockquote class="blockquote">
 <ol type="1">
-<li><p>How learning to cook my grandmother’s traditional dumplings connected me to my Chinese heritage and taught me patience</p></li>
-<li><p>My experience running the school’s Instagram account transformed my understanding of digital storytelling and community building</p></li>
-<li><p>An extended metaphor comparing my life journey to tending my rooftop garden - from planting seeds to weathering storms</p></li>
-<li><p>How my part-time job at a local bookstore sparked my love for recommending books and connecting with strangers through literature</p></li>
-<li><p>The day my stutter became my superpower: finding confidence through speech therapy and public speaking</p></li>
-<li><p>An extended metaphor comparing my collection of mismatched socks to embracing life’s imperfections</p></li>
-<li><p>How teaching my elderly neighbor to use Zoom during the pandemic evolved into a meaningful intergenerational friendship</p></li>
-<li><p>My journey from being the only girl on the robotics team to becoming team captain and mentoring other young women in STEM</p></li>
-<li><p>How my daily bus commute through different neighborhoods opened my eyes to social inequality and inspired my interest in urban planning</p></li>
-<li><p>The story of three family photographs: exploring how my relationship with my adopted sister evolved over time</p></li>
+<li>How learning to cook my grandmother’s traditional dumplings connected me to my Chinese heritage and taught me patience</li>
 </ol>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="2" type="1">
+<li>My experience running the school’s Instagram account transformed my understanding of digital storytelling and community building</li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="3" type="1">
+<li>An extended metaphor comparing my life journey to tending my rooftop garden - from planting seeds to weathering storms</li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="4" type="1">
+<li>How my part-time job at a local bookstore sparked my love for recommending books and connecting with strangers through literature</li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="5" type="1">
+<li>The day my stutter became my superpower: finding confidence through speech therapy and public speaking</li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="6" type="1">
+<li>An extended metaphor comparing my collection of mismatched socks to embracing life’s imperfections</li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="7" type="1">
+<li>How teaching my elderly neighbor to use Zoom during the pandemic evolved into a meaningful intergenerational friendship</li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="8" type="1">
+<li>My journey from being the only girl on the robotics team to becoming team captain and mentoring other young women in STEM</li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="9" type="1">
+<li>How my daily bus commute through different neighborhoods opened my eyes to social inequality and inspired my interest in urban planning</li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="10" type="1">
+<li>The story of three family photographs: exploring how my relationship with my adopted sister evolved over time</li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
 <p>Each of these topics is: - Specific and personal - Shows character development - Has potential for vivid storytelling - Reveals something meaningful about the writer - Can be developed into a compelling narrative</p>
-<p>Would you like me to elaborate on any of these topics?</p>
+</blockquote>
 </section>
 <section id="conclusions" class="level2">
 <h2 class="anchored" data-anchor-id="conclusions">CONCLUSIONS</h2>
