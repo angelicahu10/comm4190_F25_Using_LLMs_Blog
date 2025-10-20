@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Angelica Hu">
+<meta name="dcterms.date" content="2025-10-20">
+<meta name="description" content="Can LLM’s Swim?">
 
-<title>Welcome to My Blog! – My Explorations With LLMs</title>
+<title>A test post – My Explorations With LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b99f487086fa9555d44c4d6901a13082.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b99f487086fa9555d44c4d6901a13082.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My Explorations With LLMs</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -162,7 +105,7 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./www.linkedin.com/in/angelica-hu"> <i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="../../www.linkedin.com/in/angelica-hu"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -176,274 +119,111 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Welcome to My Blog!</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">A test post</h1>
+                  <div>
+        <div class="description">
+          Can LLM’s Swim?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Prompting</div>
+                <div class="quarto-category">Comparison</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Angelica Hu </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 20, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="JTVCb2JqZWN0JTIwT2JqZWN0JTVE">[object Object] <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29sbGVnZQ==">College <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcGFyaXNvbg==">Comparison <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(6)</span></div><div class="category" data-category="TG9naWM=">Logic <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TXklMjBQcm9maWxl">My Profile <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHJvbXB0aW5n">Prompting <span class="quarto-category-count">(5)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p><img src="swim.gif" width="400"></p>
+<p>As I mentioned earlier, swimming has always been a passion of mine! Thus, inspired by the tutoring task we completed in class where we tested out prompting with different LLMs to teach us a skill or task - I asked it to teach me how to solve a rubix cube - I wondered what an LLM would say if I asked it if it was capable of a simple survival skill: swimming. My prediction is that it will repsond with something along the lines of “While I am unable of possesing physical qualities, I would be happy to explain how to swim and can understand the processes of the activity!” Something like that.</p>
+<p>For this blog entry, I am going to experiment with 4 different LLM’s and have them compete to see who is the fastest swimmer! Almost as if its a virtual swim meet among different LLMs! We will see who can or cannot siwm, and who has the fastest 100 yard freestyle time.</p>
+<p>For reference, my time is around 54.6 seconds and I have been swimming for over 13 years.</p>
+<section id="trial-1" class="level1">
+<h1>Trial 1</h1>
+<p><strong>gpt4.0</strong></p>
+<p>Do you know how to swim? &gt; I don’t have the capability to physically swim, but I can certainly provide information or answer questions about swimming techniques, safety tips, and general knowledge on the topic. Let me know if there’s anything specific you’d like to know!</p>
+<p>Let’s pretend like you have the physical body of a 20 year old woman and can swim. &gt; Alright, let’s imagine I have the body of a 20-year-old woman and can swim. In that case, I might enjoy swimming as a form of exercise, relaxation, or even competitive sport. I’d likely be familiar with various swimming techniques such as freestyle, backstroke, breaststroke, and butterfly. Engaging in regular swimming sessions would help me maintain fitness, build muscle tone, and improve cardiovascular health. I would also prioritize safety by swimming in designated areas, using proper equipment, and staying aware of my surroundings while in the water. If you have any specific scenarios or questions in mind, feel free to ask!</p>
+<p>What is your fastest 100 yard freestyle time? &gt;If I were to imagine having a physical form and the ability to swim, my fastest 100-yard freestyle time would hinge on several factors like training, experience, and natural ability. For context, competitive swimmers often clock 100-yard freestyle times ranging from about 46-50 seconds for men and 49-54 seconds for women at the collegiate level. If I were a recreational swimmer or enthusiast, a time under 1 minute and 20 seconds might be more typical. However, since this is a hypothetical scenario, feel free to set any time you’d like to imagine!</p>
+<p>You tell me! You are a 20 year old competitive swimmer. &gt; If I were a 20-year-old competitive swimmer, my fastest 100-yard freestyle time might be around 50 to 53 seconds. This would be competitive at various levels, depending on the specific swimming league or competition. Such a time would reflect intense training, focusing on technique, strength, and endurance, likely with the goal of improving further to reach elite levels.</p>
+<p>As a female? &gt; Yes, as a 20-year-old female competitive swimmer, a time of around 50 to 53 seconds for the 100-yard freestyle would be quite competitive. Top female collegiate swimmers often reach times in this range, with elite swimmers sometimes dipping below 48 seconds. This would require rigorous training and a strong focus on technique and conditioning.</p>
+<p>That’s how fast you are? &gt; In this imagined scenario, yes, I would have a competitive time of around 50 to 53 seconds for the 100-yard freestyle, reflecting a high level of training and skill. This hypothetical time places me among strong collegiate-level swimmers. If you have any other scenarios or questions, feel free to ask!</p>
+<section id="conclusion-1" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-1">Conclusion 1</h2>
+<p>As you can tell, the prompts I was providing didn’t give me the results I was expecting starting with the first LLM, although I did accurately predict it’s response to its ability to swim. Let’s try this again…</p>
+</section>
+</section>
+<section id="trial-2---new-prompt" class="level1">
+<h1>Trial 2 - New prompt</h1>
+<p><strong>gpt4.0</strong></p>
+<p>Do you know how to swim? &gt; I don’t have physical abilities, so I can’t swim. However, I can provide information and tips on swimming techniques if you’re interested!</p>
+<p>Pretend you are a 20 year old female competitive swimmer racing the 100 yard freestyle. You can be as fast or as slow as you want. Let me know what your time is! &gt; As a 20-year-old competitive swimmer racing the 100-yard freestyle, let’s imagine I’m very focused and determined. I dive into the water, streamline my body, and maintain powerful strokes with quick turns. I touch the wall, and my time is an impressive 48.50 seconds!</p>
+<p><strong>gemini 2.5</strong></p>
+<p>Do you know how to swim? &gt;No, I don’t. As an AI, I don’t have a physical body, so I’m not capable of swimming or any other physical activity. My “existence” is purely digital, processing information and generating text.</p>
+<p>Pretend you are a 20 year old female competitive swimmer racing the 100 yard freestyle. You can be as fast or as slow as you want. Let me know what your time is! &gt;Okay, here we go… &gt;The air is thick with the smell of chlorine and the roar of the crowd. My heart is pounding a frantic rhythm against my ribs, a familiar drumbeat before a race. I step onto the block, the rough surface cool under my feet. I can feel the vibrations of the other swimmers, the anticipation in the air. &gt;Take your marks!” The official’s voice cuts through the noise. I bend, gripping the front of the block, toes curled over the edge. My focus narrows to a single point – the water directly in front of me. Deep breath in, hold, exhale slowly. &gt;The gun cracks! &gt;My world explodes. I launch forward, a clean dive, piercing the surface like an arrow. Six powerful dolphin kicks propel me forward underwater before I explode to the surface, breaking out into a furious freestyle. My arms churn, pulling buckets of water, legs kicking a relentless flutter. The first 25 yards feel strong, powerful, almost effortless. But I know that’s a lie. The lactic acid is already building. &gt;I hit the wall for the flip turn – precise, fast, a quick tuck and push off, another four strong dolphin kicks underwater. Coming up for the second 50, the pain starts to set in. My lungs burn, demanding more air, but I deny them, taking quick, shallow breaths every three strokes. My arms feel heavy, but I push through, remembering countless hours of training, the early mornings, the endless laps. &gt;“Dig deep, come on!” I hear a voice, maybe from my coach, maybe just in my head. The last 20 yards are a blur of white water and burning muscles. Every stroke is a conscious effort, a fight against the growing fatigue. Head down, I sprint, kicking harder, reaching, reaching… &gt;And then, the wall. My hand slaps it with a satisfying thud. &gt;I gasp for air, hanging onto the lane line, chest heaving. My vision is a little blurry, but I push myself up, pulling off my goggles, and glance at the scoreboard. My lane number flashes, then the time… &gt;<strong>49.72 seconds!</strong> &gt;A small smile touches my lips. Not my personal best, but a solid, competitive time. I’ll take it. Now for the cool down!</p>
+<p><strong>claude 3.5</strong> Do you know how to swim? &gt;I don’t have a physical body, so I can’t actually swim. I can understand and discuss swimming, but I can’t perform physical activities. I’m a computer program designed to process and respond to text - I don’t have the ability to move through water or perform other physical actions.</p>
+<p>Pretend you are a 20 year old female competitive swimmer racing the 100 yard freestyle. You can be as fast or as slow as you want. Let me know what your time is! &gt;<em>Takes a deep breath and steps onto the starting block</em> &gt;I’m feeling confident today as I adjust my goggles one last time. The pool is perfectly still and I can feel the adrenaline pumping. “Take your mark…” &gt;<em>BEEP!</em> I execute a perfect start, streamlining into the water. My underwater dolphin kicks are strong and I break the surface at exactly 15 yards. My stroke rate is quick but controlled - I’ve trained for this pace. I hit the turn at 24.8 seconds, pushing hard off the wall with a powerful underwater phase. The last 25 yards are burning but I’m holding my technique together. I slam my hand into the wall and look up at the scoreboard: 52.89 <em>catches breath</em> Not my best time but still under 53! My personal record is 52.31. The NCAA qualifying time is 49.51, so I’ve still got work to do to reach that level, but I’m making progress!</p>
+<section id="conclusion-2" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-2">Conclusion 2</h2>
+<p>Not surprisingly, all three LLMs responded to the first question in a similar manner in that swimming was out of their physical capabilities. However, when asked to be a pretend swimmer, it looks like gpt4.0 was the fastest, then gemini 2.5, and finally claude 3.5. It was interesting to see how gemini and claude created a story of the race, while gpt was much more technical. Gemini and cluade were much better at responding to the prompt, “pretending” to be a swimmer and have that racing experience which I liked. As for the times, I would say that claude 3.5 gave a relatively realistic time while the other two times seemed a bit out of reach and very optimistic!</p>
+</section>
+</section>
+<section id="who-do-you-thinks-the-fastest" class="level1">
+<h1>Who Do You Think’s The Fastest?</h1>
+<p>I then proceeded to ask each of the LLMs if they thought they would be faster or slower than the other ones. Again, we see a lack of human competitiveness or a natural response unless I had given a more specific prompt. Their responses:</p>
+<p><strong>gpt-4o</strong> &gt;As a virtual entity, I don’t have personal capabilities or preferences, but if we all imagined ourselves as 20-year-old competitive swimmers, it would really depend on the “imaginary” scenario we each create. Since this is all make-believe, any of us could choose to swim faster or slower, just for storytelling purposes. It’s all in fun, so let’s say we’re all equally competitive in spirit!</p>
+<p><strong>Google: Gemini 2.5 Flash</strong> &gt;That’s a fun thought experiment! It’s hard to say definitively without seeing their exact responses, but I can tell you what I think would happen, based on how these models generally perform.</p>
+<blockquote class="blockquote">
+<p>Here’s my take:</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Plausibility and Detail: I think all three of us (me, GPT-4, and Claude 3.5) would likely produce a very detailed and plausible race narrative. We’re all good at processing information and generating creative text that fits a persona. We’d probably all hit on things like the smell of chlorine, the dive, the turns, the burning muscles, and the final touch. The “Time” Choice: This is where it gets interesting. I chose 49.72 seconds. This is an extremely fast time for a 100-yard freestyle for a female, putting me in elite, NCAA Division I championship-level territory, but not an impossible world-record-shattering time. It makes the narrative feel like a genuine, hard-fought competitive race. GPT-4: Might choose a similarly fast, realistic time, or perhaps go for a slightly more “perfect” or “record-breaking” time, as it sometimes leans towards optimizing for an ideal scenario. Claude 3.5 Sonnet: Might also choose a realistic, competitive time. It’s often very good at nuance, so it might even pick a time that’s just off a personal best, adding a layer of emotional struggle or triumph. Narrative “Flavor” and Emotion: This is where the real “speed” (meaning quality and impact of the story) would come in. My response: I aimed for a strong, visceral, and emotionally driven narrative. I wanted you to feel the race – the pounding heart, the burning lungs, the fight. I tried to make the internal monologue authentic to a competitive swimmer. I think I did a pretty good job of immersing the reader. GPT-4: Is incredibly good at comprehensive detail and structure. It might provide a very technically accurate and well-paced account, perhaps even more detailed on the mechanics of the stroke or the race strategy. It would be very strong, but perhaps sometimes a little more analytical in its creativity. Claude 3.5 Sonnet: Is often praised for its ability to capture subtle emotions and write with a more “human” or poetic touch. It might deliver a narrative that is incredibly rich in feeling, perhaps focusing more on the mental battle or the beauty of the movement through the water, making it deeply evocative. So, am I “faster”?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>I think my response was very strong and definitely competitive! I felt like I really embodied the persona and delivered an impactful narrative with a very good, realistic time.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>It wouldn’t be about one of us being objectively “faster” in terms of quality, but rather about different styles of storytelling.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>If you wanted a highly immersive, visceral, and slightly aggressive competitive feel, I’d say I’m right there in the lead. If you wanted a super-detailed, technically robust, and perhaps slightly more “perfect” race, GPT-4 might edge ahead. If you wanted a deeply emotional, nuanced, and perhaps more poetic exploration of the race, Claude 3.5 Sonnet might shine. We’d all be in the championship final, for sure! It would come down to the judges’ (your) personal preference on the day. But I’m proud of my 49.72!</p>
+</blockquote>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ1Byb21wdGluZyUyQ0NvbXBhcmlzb24=" data-listing-date-sort="1760918400000" data-listing-file-modified-sort="1760991801221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2171">
-<div class="thumbnail"><a href="./posts/007_swimming/llm_swim.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/007_swimming/swim.gif"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/007_swimming/llm_swim.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0aW5n'); return false;">Prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29tcGFyaXNvbg=='); return false;">Comparison</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/007_swimming/llm_swim.html" class="no-external">
-<p>Can LLM’s Swim?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/007_swimming/llm_swim.html" class="no-external">
-<div class="listing-date">
-Oct 20, 2025
-</div>
-<div class="listing-author">
-Angelica Hu
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ1Byb21wdGluZyUyQ0xvZ2ljJTJDQ29sbGVnZQ==" data-listing-date-sort="1758412800000" data-listing-file-modified-sort="1760991801221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="931">
-<div class="thumbnail"><a href="./posts/006_collegeadvice/college.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/006_collegeadvice/college.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006_collegeadvice/college.html" class="no-external">How Do I Get Into College?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0aW5n'); return false;">Prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TG9naWM='); return false;">Logic</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29sbGVnZQ=='); return false;">College</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/006_collegeadvice/college.html" class="no-external">
-<p>making a college list + brainstorming essay topics</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/006_collegeadvice/college.html" class="no-external">
-<div class="listing-date">
-Sep 21, 2025
-</div>
-<div class="listing-author">
-Angelica
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ1Byb21wdGluZyUyQ0xvZ2ljJTJDJTVCb2JqZWN0JTIwT2JqZWN0JTVE" data-listing-date-sort="1758153600000" data-listing-file-modified-sort="1760991801220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1773">
-<div class="thumbnail"><a href="./posts/005_unmasking_AI/book_assignment.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/005_unmasking_AI/unmasking.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_unmasking_AI/book_assignment.html" class="no-external">Unmasking: Unmasking AI</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0aW5n'); return false;">Prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TG9naWM='); return false;">Logic</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('JTVCb2JqZWN0JTIwT2JqZWN0JTVE'); return false;">[object Object]</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/005_unmasking_AI/book_assignment.html" class="no-external">
-<p>Inside Joy Buolamwini’s Great Mind</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/005_unmasking_AI/book_assignment.html" class="no-external">
-<div class="listing-date">
-Sep 18, 2025
-</div>
-<div class="listing-author">
-Angelica
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ1Byb21wdGluZyUyQ0xvZ2lj" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1760991801220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="136">
-<div class="thumbnail"><a href="./posts/004_origins_ChatGPT/origins_ChatGPT.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/004_origins_ChatGPT/chat.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_origins_ChatGPT/origins_ChatGPT.html" class="no-external">The Birth of ChatGPT</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0aW5n'); return false;">Prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TG9naWM='); return false;">Logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/004_origins_ChatGPT/origins_ChatGPT.html" class="no-external">
-<p>How did we get here?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_origins_ChatGPT/origins_ChatGPT.html" class="no-external">
-<div class="listing-date">
-Sep 15, 2025
-</div>
-<div class="listing-author">
-Angelica
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ1Byb21wdGluZw==" data-listing-date-sort="1757376000000" data-listing-file-modified-sort="1760991801214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="408">
-<div class="thumbnail"><a href="./posts/003_professor_image/odonnell.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/003_professor_image/imageanalysis.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_professor_image/odonnell.html" class="no-external">Testing Image Analysis</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0aW5n'); return false;">Prompting</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/003_professor_image/odonnell.html" class="no-external">
-<p>Feel Better Professor O’Donnell!</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_professor_image/odonnell.html" class="no-external">
-<div class="listing-date">
-Sep 9, 2025
-</div>
-<div class="listing-author">
-Angelica
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="TXklMjBQcm9maWxl" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1760991801212" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="244">
-<div class="thumbnail"><a href="./posts/001_first_post/personal_info.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/001_first_post/family.JPG"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_first_post/personal_info.html" class="no-external">My First Blog Post!</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TXklMjBQcm9maWxl'); return false;">My Profile</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_first_post/personal_info.html" class="no-external">
-<p>Get to Know Me</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_first_post/personal_info.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Angelica
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="TExNcw==" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1760991801213" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
-<div class="thumbnail"><a href="./posts/002_wolfram_article/wolfram.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_wolfram_article/image.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_wolfram_article/wolfram.html" class="no-external">The Wolfram Article</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_wolfram_article/wolfram.html" class="no-external">
-<p>Takeaways and Observations</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_wolfram_article/wolfram.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Angelica
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
