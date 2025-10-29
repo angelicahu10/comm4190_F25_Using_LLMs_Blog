@@ -1,10 +1,10 @@
 ---
 title: "About"
-image: profile.jpg
+image: LYD-631.JPEG
 about:
   template: jolla
 ---
 
-Hi! My name is Angelica and I'm a current sophomore at the University of Pennsylvania studying Health & Societies, concentrating in Healthcare Markets and Finance. I'm also minoring in Neuroscience & Healthcare Management, and Data Science and Analytics.
+Hi! My name is Angelica and I'm a current sophomore at the University of Pennsylvania studying Health & Societies with a minor in Healthcare Management and Data Science Analytics. I'm interested in the life sciences industry and the intersection between healthcare and business, particulal
 
 Angelica Hu
