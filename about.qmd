@@ -5,6 +5,4 @@ about:
   template: jolla
 ---
 
-Hi! My name is Angelica and I'm a current sophomore at the University of Pennsylvania studying Health & Societies with a minor in Healthcare Management and Data Science Analytics. I'm interested in the life sciences industry and the intersection between healthcare and business, particulal
-
-Angelica Hu
+Hi! My name is Angelica and I'm a current sophomore at the University of Pennsylvania studying Health & Societies with a minor in Healthcare Management and Data Science Analytics. I'm interested in the life sciences industry and the intersection between healthcare and business and am excited to learn more about how data analysis can be implemented in the healthcare field.
