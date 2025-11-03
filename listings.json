@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/011_ethics/ethics.html",
+      "/posts/010_failures/MLfailures.html",
       "/posts/009_hello/hello.html",
       "/posts/008_longResponses/longestPrompt.html",
       "/posts/007_swimming/llm_swim.html",
