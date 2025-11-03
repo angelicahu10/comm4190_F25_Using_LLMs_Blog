@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: LYD-631.JPEG
+image: headshot.jpg
 about:
   template: jolla
 ---
