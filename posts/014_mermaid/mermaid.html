@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Angelica Hu">
-<meta name="dcterms.date" content="2025-11-05">
-<meta name="description" content="a harsh reality">
+<meta name="author" content="Angelica">
+<meta name="dcterms.date" content="2025-11-28">
+<meta name="description" content="mermaid sequence and the little mermaid">
 
-<title>Should we care about ethics? – My Explorations With LLMs</title>
+<title>Playing with Mermaids – My Explorations With LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,41 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -106,6 +71,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -153,16 +121,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Should we care about ethics?</h1>
+      <h1 class="title">Playing with Mermaids</h1>
                   <div>
         <div class="description">
-          a harsh reality
+          mermaid sequence and the little mermaid
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">ethics</div>
-                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">Prompting</div>
+                <div class="quarto-category">Sequence</div>
+                <div class="quarto-category">Stories</div>
               </div>
                   </div>
   </div>
@@ -173,14 +142,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Angelica Hu </p>
+               <p>Angelica </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 5, 2025</p>
+        <p class="date">November 28, 2025</p>
       </div>
     </div>
     
@@ -199,11 +168,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="dc7aaac7-1e18-4847-88cd-d85aa88caad4" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>draft <span class="op">=</span> <span class="st">"false"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="ariel.jpg" width="50%"></p>
+<p>After learning about mermaid sequence in class and how information could be displayed in flowcharts, I decided to experiment with this method by narrating a different happy ever after ending for Ariel, The Little Mermaid. (Note my play on words). By playing with the sequence, I showed at a basic level how Ariel’s fate could have turned out if there were different decisions made at the milestone where she fell in love with Prince Eric. Doing so is a bit silly to see as we know all Disney movies and princesses have their happy ending.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Ariel dreams of living on land] --&gt; B(Ariel rescues Prince Eric)
+  B --&gt; C{Ariel falls in love with Eric}
+  C --&gt; D[Ariel and Eric marry]
+  C --&gt; E[Ariel leaves Eric]
+</pre>
 </div>
-<p><img src="ethics.jpg" width="400"></p>
-<p>A harsh reality of growing up is realizing that sadly, we live in a capitalistic society and oftentimes many people in power only care about profit and becoming wealthier. While I agree financial stability and economic security is important for individuals, at what point is it enough?</p>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Working with this a little more, we could demonstrate how a conversation between Ariel and Eric may go depending on the decisions at the end of the flow chart. If decision 1 happened and we see they got married, perhaps they would have had a conversation like this:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant A as Ariel
+    participant B as Eric
+
+    A-&gt;&gt;B: Prince Eric, I love you so much!
+    B-&gt;&gt;A: Oh Princess Ariel, will you marry me?
+    A-&gt;&gt;B: Yes Eric, I do!
+    B-&gt;&gt;A: This is my dream come true!
+    A-&gt;&gt;B: Should we have our wedding on land or under the sea?
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>But, if fate didn’t end up this way. How would a conversation between the two have gone? Maybe something like this…</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant A as Ariel
+    participant B as Eric
+    participant C as Ursula
+
+    A-&gt;&gt;B: Eric, why won't you come back under the sea with me?
+    B-&gt;&gt;A: Princess Ariel, my life is on land.
+    A-&gt;&gt;B: We will never work then.
+    B-&gt;&gt;A: But Ariel, I love you! Don't leave!
+    B-&gt;&gt;C: The plan worked. She won't come on land again your highness.
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Maybe the villian might win in this story. Hopefully not!</p>
 
 
 

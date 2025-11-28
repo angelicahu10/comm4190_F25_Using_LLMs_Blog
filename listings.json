@@ -2,6 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/014_mermaid/mermaid.html",
+      "/posts/012_strengths/strengths.html",
+      "/posts/013_relationships/relationship.html",
       "/posts/011_ethics/ethics.html",
       "/posts/010_failures/MLfailures.html",
       "/posts/009_hello/hello.html",
