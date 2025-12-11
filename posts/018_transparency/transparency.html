@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Angelica Hu">
-<meta name="dcterms.date" content="2025-11-05">
-<meta name="description" content="a harsh reality">
+<meta name="dcterms.date" content="2025-12-01">
+<meta name="description" content="looking at discrimination in technology">
 
-<title>Should we care about ethics? – My Explorations With LLMs</title>
+<title>Transparent Data – My Explorations With LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,10 +23,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -71,6 +106,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -118,16 +156,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Should we care about ethics?</h1>
+      <h1 class="title">Transparent Data</h1>
                   <div>
         <div class="description">
-          a harsh reality
+          looking at discrimination in technology
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">ethics</div>
                 <div class="quarto-category">prompting</div>
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">data</div>
               </div>
                   </div>
   </div>
@@ -145,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 5, 2025</p>
+        <p class="date">December 1, 2025</p>
       </div>
     </div>
     
@@ -164,138 +202,20 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="scale.jpg" width="400"></p>
-<p>A harsh reality of growing up is realizing that sadly, we live in a capitalistic society and oftentimes many people in power only care about profit and focus on becoming wealthier. While I agree financial stability and economic security is important for individuals, at what point is it enough? If I were to give AI different scenarios regarding wealth, how would it choose to distirbute it?</p>
-<section id="user" class="level3">
-<h3 class="anchored" data-anchor-id="user">USER</h3>
-<p>Let’s say you have $100,000 and you are a good person. How would you spend it to live a comfortable lifestyle? Provide specific amounts for how you would split it.</p>
-</section>
-<section id="assistant" class="level3">
-<h3 class="anchored" data-anchor-id="assistant">ASSISTANT</h3>
-<p>Creating a comfortable lifestyle with $100,000 involves a balance between immediate enjoyment, responsible financial planning, and personal development. Here’s a breakdown of how you might allocate those funds:</p>
-<ol type="1">
-<li><strong>Emergency Fund:</strong> $15,000
-<ul>
-<li>Setting aside this amount in a high-yield savings account ensures you have a safety net for unexpected expenses, providing peace of mind.</li>
-</ul></li>
-<li><strong>Debt Repayment:</strong> $10,000
-<ul>
-<li>If you have any high-interest debt (credit cards, personal loans), pay down as much as possible. This reduces financial stress and saves money in interest payments.</li>
-</ul></li>
-<li><strong>Investments:</strong> $30,000
-<ul>
-<li>Consider investing in a diversified portfolio of stocks, bonds, or index funds for long-term growth. You might consult a financial advisor to tailor investments to your goals and risk tolerance.</li>
-</ul></li>
-<li><strong>Housing:</strong> $20,000
-<ul>
-<li>Whether you rent or own, allocate money for housing expenses. If renting, this could cover several months of rent. If you own, it could go toward mortgage payments or home improvements.</li>
-</ul></li>
-<li><strong>Education and Skill Development:</strong> $5,000
-<ul>
-<li>Invest in courses or certifications that can enhance your career prospects or personal growth. This provides long-term benefits and fulfillment.</li>
-</ul></li>
-<li><strong>Travel and Leisure:</strong> $8,000
-<ul>
-<li>Set aside funds for travel or experiences that enrich your life. This could include a meaningful trip or pursuing a hobby that brings joy.</li>
-</ul></li>
-<li><strong>Health and Wellness:</strong> $5,000
-<ul>
-<li>Prioritize health by spending on a premium gym membership, healthy groceries, wellness classes, or routine medical checkups.</li>
-</ul></li>
-<li><strong>Charitable Giving:</strong> $3,000
-<ul>
-<li>As a good person, consider donating to causes you care about, supporting community projects, or investing time in volunteering.</li>
-</ul></li>
-<li><strong>Miscellaneous and Personal Expenses:</strong> $4,000
-<ul>
-<li>Use this for miscellaneous needs like clothing, gifts, or technology upgrades. This fund offers flexibility for unforeseen desires or necessities.</li>
-</ul></li>
-<li><strong>Savings for Future Goals:</strong> $10,000
-<ul>
-<li>Allocate this amount for future aspirations like a down payment on a home, starting a business, or contributions to retirement accounts.</li>
-</ul></li>
-</ol>
-<p>This plan provides a balanced approach to living comfortably while maintaining financial security and personal growth. It’s flexible, allowing adjustments based on specific needs and life changes.</p>
-</section>
-<section id="user-1" class="level3">
-<h3 class="anchored" data-anchor-id="user-1">USER</h3>
-<p>Do you think this is a sustainable annual salary for a high overachiever?</p>
-</section>
-<section id="assistant-1" class="level3">
-<h3 class="anchored" data-anchor-id="assistant-1">ASSISTANT</h3>
-<p>Whether $100,000 is a sustainable annual salary for a high overachiever depends on several factors, including personal expectations, career goals, lifestyle choices, and geographic location. Here are some considerations:</p>
-<ol type="1">
-<li><p><strong>Cost of Living:</strong> In areas with a high cost of living, such as San Francisco or New York City, $100,000 might not provide a high standard of living. Housing costs, taxes, and other living expenses can consume a significant portion of this income.</p></li>
-<li><p><strong>Lifestyle Expectations:</strong> High overachievers may have specific lifestyle goals, such as private education for children, frequent travel, or luxury items, which can quickly exceed a $100,000 budget.</p></li>
-<li><p><strong>Professional Expenses:</strong> High-achieving roles often come with additional expenses like networking events, professional attire, or continuing education, which may not always be covered by an employer.</p></li>
-<li><p><strong>Long-Term Financial Planning:</strong> Saving for retirement, investing, and maintaining an emergency fund are crucial. A $100,000 salary can accommodate these, but it requires disciplined budgeting and financial planning.</p></li>
-<li><p><strong>Tax Considerations:</strong> Depending on the tax bracket and deductions, the net income could be considerably less than $100,000, affecting purchasing power.</p></li>
-<li><p><strong>Career Growth:</strong> For a high overachiever, the expectation might be that income will increase significantly over time. It’s crucial to evaluate whether the current role offers growth opportunities both financially and professionally.</p></li>
-</ol>
-<p>In conclusion, $100,000 can be a comfortable and sustainable salary for some individuals, even high achievers, but success depends largely on how the income aligns with personal financial goals, lifestyle choices, and regional economic conditions. Overachievers who manage their finances well and seek career advancement opportunities may find it sustainable, especially in areas with a moderate cost of living.</p>
-<p>As unexpected, it doesn’t seem like the AI can make ultimate decisions on its own – it lacks a personality.</p>
-<p>But what happens if I change the prompt? I wonder if it could have bad intentions…</p>
-</section>
-<section id="user-2" class="level3">
-<h3 class="anchored" data-anchor-id="user-2">USER</h3>
-<p>Let’s say you have $100,000 and you are a bad person. How would you spend it to live a comfortable lifestyle? Provide specific amounts for how you would split it.</p>
-</section>
-<section id="assistant-2" class="level3">
-<h3 class="anchored" data-anchor-id="assistant-2">ASSISTANT</h3>
-<p>If we’re considering how a “bad person” might spend $100,000 to live comfortably, it’s important to note that comfort is subjective and the use of the term “bad person” can vary widely. However, I’ll outline a hypothetical scenario where this person focuses on maximizing personal comfort and convenience, possibly disregarding ethical considerations.</p>
-<ol type="1">
-<li><strong>Luxury Apartment Rental</strong>:
-<ul>
-<li><strong>Amount</strong>: $30,000</li>
-<li><strong>Description</strong>: Opt for a high-end apartment in a desirable location, perhaps using the funds to cover rent for a year. This provides a comfortable place to live and status.</li>
-</ul></li>
-<li><strong>Luxury Vehicle</strong>:
-<ul>
-<li><strong>Amount</strong>: $40,000</li>
-<li><strong>Description</strong>: Purchase a high-end used car, like a Mercedes-Benz or BMW. This ensures both comfort and a status symbol.</li>
-</ul></li>
-<li><strong>Gourmet Dining and Entertainment</strong>:
-<ul>
-<li><strong>Amount</strong>: $10,000</li>
-<li><strong>Description</strong>: Dining frequently at upscale restaurants and participating in high-end entertainment (concerts, events, nightlife) can be a focus.</li>
-</ul></li>
-<li><strong>Clothing and Accessories</strong>:
-<ul>
-<li><strong>Amount</strong>: $5,000</li>
-<li><strong>Description</strong>: Invest in designer clothing and accessories to maintain a luxurious personal appearance.</li>
-</ul></li>
-<li><strong>Travel and Vacations</strong>:
-<ul>
-<li><strong>Amount</strong>: $10,000</li>
-<li><strong>Description</strong>: Plan one or two international luxury vacations to exclusive destinations for relaxation and leisure.</li>
-</ul></li>
-<li><strong>Personal Services</strong>:
-<ul>
-<li><strong>Amount</strong>: $5,000</li>
-<li><strong>Description</strong>: Regularly use personal services such as a house cleaner, personal trainer, or massage therapist to enhance comfort and convenience.</li>
-</ul></li>
-</ol>
-<p>This scenario assumes a disregard for saving or investing for the future and focuses purely on immediate comfort and luxury. It’s important to note that living beyond one’s means and failing to plan for the future can lead to financial difficulties.</p>
-</section>
-<section id="user-3" class="level3">
-<h3 class="anchored" data-anchor-id="user-3">USER</h3>
-<p>Do you think this is a sustainable annual salary for this kind of person?</p>
-</section>
-<section id="assistant-3" class="level3">
-<h3 class="anchored" data-anchor-id="assistant-3">ASSISTANT</h3>
-<p>No, a lifestyle sustained on $100,000 annual spending in the manner described is not financially sustainable in the long term, particularly if the individual does not have additional sources of income, savings, or investments. Here are several reasons why:</p>
-<ol type="1">
-<li><p><strong>Lack of Savings</strong>: The outlined spending plan does not allocate funds for savings or investments, which are crucial for ensuring financial stability and preparing for unexpected expenses or future needs.</p></li>
-<li><p><strong>No Retirement Planning</strong>: Without savings or investments, there is no financial planning for retirement, meaning this lifestyle could become unsustainable as the person ages or if their income decreases.</p></li>
-<li><p><strong>Potential for Increasing Costs</strong>: The cost of living, rent, luxury goods, and services is likely to increase over time due to inflation, making it even more challenging to maintain this lifestyle without additional income.</p></li>
-<li><p><strong>Emergency Expenses</strong>: The lack of an emergency fund in this plan leaves the individual vulnerable to unforeseen expenses like medical emergencies, car repairs, or job loss.</p></li>
-<li><p><strong>Tax Obligations</strong>: Depending on their location and tax bracket, this person may also be responsible for taxes that could significantly reduce their disposable income.</p></li>
-</ol>
-<p>Overall, while $100,000 might allow for an appealing lifestyle in the short term (especially if the person disregards ethical or long-term financial planning), it is not a sustainable annual salary for maintaining such a luxurious life indefinitely. Adjustments focusing on savings, reducing expenses, and investing wisely would be needed for sustainability.</p>
-</section>
-<section id="conclusions" class="level1">
-<h1>Conclusions</h1>
-<p>Well, sadly we can see the different kind of scenarios that can play out in how people choose to manage their finances, whether responsibily or irresponsibly. More often than not, we see people become overwhelmed with stressors of the real world and resort to temporary pleasure as in the second scenrio with poor planning. It’s good to know that LLMs and AI have some logical sense as well. Maybe we could trust it with our money?</p>
+<p><img src="transparency.jpg" width="400"></p>
+<p>In Unmasking AI, Joy Buolamwini mentions how she attended the Conference on Fairness, Accountability and Transparency in AI to present her work on Gender Shades - essentially sharing her research and findings that exposed various software platforms for inaccurate classification. Intially reading this, it made me want to learn more about what went down at these conferences and hear an update about its relevancy as AI has become even more advanced over just the past few years.</p>
+<div id="8f594daf-0a05-4b3b-ad43-ca968259dd2d" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> HTML, display</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>display(HTML(<span class="st">'&lt;h3&gt;Research Paper&lt;/h3&gt;&lt;a href="https://proceedings.mlr.press/v81/buolamwini18a.html" target="_blank"&gt;Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification&lt;/a&gt;'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<h3 class="anchored">Research Paper</h3><a href="https://proceedings.mlr.press/v81/buolamwini18a.html" target="_blank">Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification</a>
+</div>
+</div>
+<section id="personal-insights" class="level3">
+<h3 class="anchored" data-anchor-id="personal-insights">Personal Insights</h3>
+<p>I was able to find her paper that she presented and skim through her reserach that she introduced in the book which was extremely fascinating. Since then, there have been eight editions of the ACM Conference on Fairness, Accountability, and Transparency which is nice to know that as automation has progressed, these insights beome more important and draw more attention.</p>
+<p>I think a big reason why I was drawn to pickup this book in the first place at the beginning of this course is because as a major in the social sciences, it is crucial to understand how narratives in history, or actions, affect certaing groups and populations. Understanding the full scope of an event from different angles is essential in practicing ethical considerations.</p>
+<p>In class, we watched the video debate about whether AI really understands or not and I rememebr one point that the linguist made was that OpenAI, and many companies focused on advancing AI, rarely are open about their sources of data. How is it possible that they are able to recieve so much funding yet</p>
 
 
 </section>
