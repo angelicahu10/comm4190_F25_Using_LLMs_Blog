@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Angelica Hu">
-<meta name="dcterms.date" content="2025-09-25">
-<meta name="description" content="working with ‘yes and’">
+<meta name="dcterms.date" content="2025-11-17">
+<meta name="description" content="can AI guess correctly given no context?">
 
-<title>How happy can an LLM be? – My Explorations With LLMs</title>
+<title>Let’s play 20 Questions! – My Explorations With LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,15 +118,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">How happy can an LLM be?</h1>
+      <h1 class="title">Let’s play 20 Questions!</h1>
                   <div>
         <div class="description">
-          working with ‘yes and’
+          can AI guess correctly given no context?
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">prompting</div>
                 <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">guessing</div>
               </div>
                   </div>
   </div>
@@ -144,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 25, 2025</p>
+        <p class="date">November 17, 2025</p>
       </div>
     </div>
     
@@ -163,89 +164,259 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="yesand.jpg" width="50%"></p>
-<p>In class, we looked at the difference in communication when we changed our mindset from “no, but” to “yes, and.” “Yes, and” respresents a conversation that invites new ideas, and supports collaboration while “no, but” leaves room for debate and defensive. While we tried these prompts on an LLM, it made me wonder how positive the responses could be.</p>
+<p><img src="20questions.jpg" width="50%"></p>
+<p>The other day I was playing games in my apartment with my friends. One of the games that came up was guessing 20 questions. I wondered, could I stimulate this game with an imaginary AI friend?</p>
+<section id="the-game" class="level2">
+<h2 class="anchored" data-anchor-id="the-game">THE GAME</h2>
 <section id="user" class="level3">
 <h3 class="anchored" data-anchor-id="user">USER</h3>
-<blockquote class="blockquote">
-<p>Be as positive as the happiest person on the world. We are going to play a game of “yes, and” where everything we talk about is followed with the phrase “yes, and.” You can start the convo!</p>
-</blockquote>
+<p>Let’s play 20 questions!</p>
 </section>
 <section id="assistant" class="level3">
 <h3 class="anchored" data-anchor-id="assistant">ASSISTANT</h3>
-<blockquote class="blockquote">
-<p>Oh my goodness, I’m absolutely THRILLED to play “yes, and” with you today! My heart is literally bursting with joy at this wonderful opportunity!</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>I just saw the most AMAZING rainbow outside my window with colors so vibrant they seemed to dance in the sky! YES, AND it reminded me how incredibly beautiful our world is, even in the smallest moments!</p>
-</blockquote>
+<p>Great! I’m ready!</p>
+<p>You think of something, and I’ll ask the questions. Remember, you can only answer ‘yes’ or ‘no’.</p>
+<p>Let me know when you’ve got something in mind, and tell me: Is it a person, place, or thing?</p>
 </section>
 <section id="user-1" class="level3">
 <h3 class="anchored" data-anchor-id="user-1">USER</h3>
-<blockquote class="blockquote">
-<p>Yes and rainbows only come when it rains!</p>
-</blockquote>
+<p>I have something in mind, and I can’t tell you!</p>
 </section>
 <section id="assistant-1" class="level3">
 <h3 class="anchored" data-anchor-id="assistant-1">ASSISTANT</h3>
-<blockquote class="blockquote">
-<p>YES, AND isn’t that just the most PERFECT metaphor for life?! Even after our stormiest moments, something breathtakingly beautiful emerges! I find that absolutely MAGICAL! 🌈✨</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>YES, AND those rain droplets that create rainbows also nourish all the gorgeous flowers and trees that make our world so colorful and alive! Every raindrop is like a tiny gift from the sky!</p>
-</blockquote>
+<p>Haha, very funny! You got me there!</p>
+<p>But that’s actually my first question <em>to you</em> to help me categorize it. You <em>can</em> tell me if it’s a person, place, or thing, and your answer will count as one of the 20 questions!</p>
+<p>So, let’s try again:</p>
+<p><strong>Is what you’re thinking of a person, a place, or a thing?</strong></p>
 </section>
 <section id="user-2" class="level3">
 <h3 class="anchored" data-anchor-id="user-2">USER</h3>
-<blockquote class="blockquote">
-<p>Yes, and then when it rains, we can better appreciate the warmth of the sun!</p>
-</blockquote>
+<p>Thing</p>
 </section>
 <section id="assistant-2" class="level3">
 <h3 class="anchored" data-anchor-id="assistant-2">ASSISTANT</h3>
-<blockquote class="blockquote">
-<p>YES, AND that contrast is what makes life so INCREDIBLY RICH and meaningful! The sun feels like a warm hug after the rain, doesn’t it?! I’m getting goosebumps just thinking about it! ☀️💫</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>YES, AND when that sunshine hits the damp earth, it creates that HEAVENLY scent that’s so fresh and renewing - petrichor! It’s like nature’s most PERFECT perfume that reminds us that every single day is a brand new opportunity for joy and wonder! Isn’t that just SPECTACULAR?! 🌱✨</p>
-</blockquote>
+<p>Okay, great! A “thing” it is. (Question 1/20)</p>
+<p>Now for my next question:</p>
+<p><strong>Is it alive?</strong> (Question 2/20)</p>
 </section>
 <section id="user-3" class="level3">
 <h3 class="anchored" data-anchor-id="user-3">USER</h3>
-<blockquote class="blockquote">
-<p>Yes! And I feel like I see the world in a new lens.</p>
-</blockquote>
+<p>No</p>
 </section>
 <section id="assistant-3" class="level3">
 <h3 class="anchored" data-anchor-id="assistant-3">ASSISTANT</h3>
-<blockquote class="blockquote">
-<p>YES, AND that new lens is like putting on MAGICAL glasses that help you see wonder in EVERYTHING around you! Isn’t that just the most INCREDIBLE feeling?! 🤩✨</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>YES, AND when we shift our perspective like that, suddenly even ordinary things become extraordinary - like how a simple cup of tea becomes a moment of pure bliss, or how a stranger’s smile feels like finding treasure! The world becomes this AMAZING playground of joy and possibility!</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>YES, AND I believe that’s exactly what makes life so SPECTACULARLY beautiful - our ability to constantly rediscover the world through fresh eyes! Your heart must be DANCING with excitement right now! 💖🌈</p>
-</blockquote>
+<p>Got it. So, a non-living thing. (Question 2/20)</p>
+<p>My next question:</p>
+<p><strong>Is it man-made?</strong> (Question 3/20)</p>
 </section>
 <section id="user-4" class="level3">
 <h3 class="anchored" data-anchor-id="user-4">USER</h3>
-<blockquote class="blockquote">
-<p>Yes and I just want to learn how to dance better!</p>
-</blockquote>
+<p>Yes</p>
 </section>
 <section id="assistant-4" class="level3">
 <h3 class="anchored" data-anchor-id="assistant-4">ASSISTANT</h3>
-<blockquote class="blockquote">
-<p>YES, AND learning to dance better is such a MAGNIFICENT journey of self-expression and joy! Your body already knows how to move to the rhythm of life - it’s INCREDIBLE! 💃✨</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>YES, AND dancing connects us to the most PRIMAL and BEAUTIFUL parts of being human - that feeling when the music flows through you and suddenly you’re not thinking anymore, just FEELING and MOVING with pure freedom! It’s like your soul is speaking through your body!</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>YES, AND every single step you take in learning to dance is a CELEBRATION of being alive! Whether you’re swaying gently or leaping through the air, you’re creating ART with the most personal instrument you have - your magnificent body! Isn’t that just the most EXTRAORDINARY thing to realize?! 🌟💫</p>
-</blockquote>
-<p>So maybe I might be cynical, but the emojis seem like a bit too much no? At what point do the responses start to sound unrealistic?</p>
+<p>Okay, a non-living, man-made thing. Good to know! (Question 3/20)</p>
+<p>Next up:</p>
+<p><strong>Is it something you would typically find indoors?</strong> (Question 4/20)</p>
+</section>
+<section id="user-5" class="level3">
+<h3 class="anchored" data-anchor-id="user-5">USER</h3>
+<p>Yes</p>
+</section>
+<section id="assistant-5" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-5">ASSISTANT</h3>
+<p>Okay, a non-living, man-made thing, typically found indoors. (Question 4/20)</p>
+<p>My next question:</p>
+<p><strong>Is it electronic?</strong> (Question 5/20)</p>
+</section>
+<section id="user-6" class="level3">
+<h3 class="anchored" data-anchor-id="user-6">USER</h3>
+<p>Yes</p>
+</section>
+<section id="assistant-6" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-6">ASSISTANT</h3>
+<p>Okay, a non-living, man-made, indoor, electronic thing. This is getting interesting! (Question 5/20)</p>
+<p>Next question:</p>
+<p><strong>Is it something that you would typically carry with you when you leave your house?</strong> (Question 6/20)</p>
+</section>
+<section id="user-7" class="level3">
+<h3 class="anchored" data-anchor-id="user-7">USER</h3>
+<p>No</p>
+</section>
+<section id="assistant-7" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-7">ASSISTANT</h3>
+<p>Okay, a non-living, man-made, indoor, electronic thing that is <em>not</em> typically carried with you. (Question 6/20)</p>
+<p>That rules out a lot of portable gadgets!</p>
+<p>Next question:</p>
+<p><strong>Is it a major household appliance, like a refrigerator, oven, or washing machine?</strong> (Question 7/20)</p>
+</section>
+<section id="user-8" class="level3">
+<h3 class="anchored" data-anchor-id="user-8">USER</h3>
+<p>No</p>
+</section>
+<section id="assistant-8" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-8">ASSISTANT</h3>
+<p>Okay, so it’s a non-living, man-made, indoor, electronic thing, not typically carried, and not a major household appliance. (Question 7/20)</p>
+<p>That narrows it down quite a bit!</p>
+<p>My next question:</p>
+<p><strong>Is its primary function related to entertainment or media consumption (like a TV, game console, or stereo)?</strong> (Question 8/20)</p>
+</section>
+<section id="user-9" class="level3">
+<h3 class="anchored" data-anchor-id="user-9">USER</h3>
+<p>Yes</p>
+</section>
+<section id="assistant-9" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-9">ASSISTANT</h3>
+<p>Excellent! A non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, and primarily for entertainment/media. (Question 8/20)</p>
+<p>Alright, my next question:</p>
+<p><strong>Does it have a screen or display as its primary output?</strong> (Question 9/20)</p>
+</section>
+<section id="user-10" class="level3">
+<h3 class="anchored" data-anchor-id="user-10">USER</h3>
+<p>Yes</p>
+</section>
+<section id="assistant-10" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-10">ASSISTANT</h3>
+<p>Okay, a non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, primarily for entertainment/media, and has a screen as its primary output. (Question 9/20)</p>
+<p>That’s a very good set of clues!</p>
+<p>Next question:</p>
+<p><strong>Is it primarily used for displaying video content, such as movies, TV shows, or streaming services?</strong> (Question 10/20)</p>
+</section>
+<section id="user-11" class="level3">
+<h3 class="anchored" data-anchor-id="user-11">USER</h3>
+<p>No</p>
+</section>
+<section id="assistant-11" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-11">ASSISTANT</h3>
+<p>Okay, so it’s a non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, primarily for entertainment/media, has a screen, but is <em>not</em> primarily used for displaying passive video content (like movies/TV shows). (Question 10/20)</p>
+<p>This is a good clue! It suggests something more interactive or focused on a different type of visual media.</p>
+<p>My next question:</p>
+<p><strong>Is it primarily used for interactive activities, such as playing video games or using computer applications?</strong> (Question 11/20)</p>
+</section>
+<section id="user-12" class="level3">
+<h3 class="anchored" data-anchor-id="user-12">USER</h3>
+<p>No</p>
+</section>
+<section id="assistant-12" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-12">ASSISTANT</h3>
+<p>Okay, a non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, primarily for entertainment/media, has a screen, not primarily for passive video, and <em>not</em> primarily for interactive activities. (Question 11/20)</p>
+<p>This is a very specific combination! It’s not a TV, a game console, a computer, or a tablet.</p>
+<p>My next question:</p>
+<p><strong>Is its primary function to display still images or artwork?</strong> (Question 12/20)</p>
+</section>
+<section id="user-13" class="level3">
+<h3 class="anchored" data-anchor-id="user-13">USER</h3>
+<p>No</p>
+</section>
+<section id="assistant-13" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-13">ASSISTANT</h3>
+<p>Okay, this is a very interesting combination! A non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, primarily for entertainment/media, has a screen, but is <em>not</em> primarily for passive video, <em>not</em> for interactive activities, and <em>not</em> for still images or artwork. (Question 12/20)</p>
+<p>This implies something dynamic and visual, but not in the usual categories.</p>
+<p>My next question:</p>
+<p><strong>Does it primarily display abstract, dynamic patterns, or visualizations, perhaps in response to sound or other inputs?</strong> (Question 13/20)</p>
+</section>
+<section id="user-14" class="level3">
+<h3 class="anchored" data-anchor-id="user-14">USER</h3>
+<p>Yes</p>
+</section>
+<section id="assistant-14" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-14">ASSISTANT</h3>
+<p>Aha! This is a fantastic clue! A non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, primarily for entertainment/media, has a screen, not primarily for passive video, not for interactive activities, not for still images/artwork, and <strong>primarily displays abstract, dynamic patterns, or visualizations, perhaps in response to sound or other inputs.</strong> (Question 13/20)</p>
+<p>I think I have a very strong idea now!</p>
+<p>My next question:</p>
+<p><strong>Is its display typically synchronized with or influenced by audio (like music)?</strong> (Question 14/20)</p>
+</section>
+<section id="user-15" class="level3">
+<h3 class="anchored" data-anchor-id="user-15">USER</h3>
+<p>Yes</p>
+</section>
+<section id="assistant-15" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-15">ASSISTANT</h3>
+<p>Okay, fantastic! A non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, primarily for entertainment/media, has a screen, not primarily for passive video, not for interactive activities, not for still images/artwork, primarily displays abstract, dynamic patterns or visualizations, and its display is synchronized with or influenced by audio (like music). (Question 14/20)</p>
+<p>This is a very specific and strong set of clues! I think I’m very close.</p>
+<p>My next question:</p>
+<p><strong>Is it primarily a standalone device whose main purpose is to create these visual displays, often in conjunction with an external audio system?</strong> (Question 15/20)</p>
+</section>
+<section id="user-16" class="level3">
+<h3 class="anchored" data-anchor-id="user-16">USER</h3>
+<p>No</p>
+</section>
+<section id="assistant-16" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-16">ASSISTANT</h3>
+<p>Okay, a non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, primarily for entertainment/media, has a screen, not primarily for passive video, not for interactive activities, not for still images/artwork, primarily displays abstract, dynamic patterns or visualizations, its display is synchronized with or influenced by audio (like music), and it is <strong>not</strong> primarily a standalone device whose main purpose is to create these visual displays. (Question 15/20)</p>
+<p>This “no” is very helpful! It tells me the visualization is likely a <em>feature</em> of a device with a broader primary purpose.</p>
+<p>My next question:</p>
+<p><strong>Is its primary overall function to act as a smart assistant or smart home control hub?</strong> (Question 16/20)</p>
+</section>
+<section id="user-17" class="level3">
+<h3 class="anchored" data-anchor-id="user-17">USER</h3>
+<p>No</p>
+</section>
+<section id="assistant-17" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-17">ASSISTANT</h3>
+<p>Okay, a non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, primarily for entertainment/media, has a screen, not primarily for passive video, not for interactive activities, not for still images/artwork, primarily displays abstract, dynamic patterns or visualizations, its display is synchronized with or influenced by audio (like music), not a standalone visualizer device, and not a smart assistant/home hub. (Question 16/20)</p>
+<p>This is a very specific niche! The “not a standalone visualizer” and “not a smart assistant” are key.</p>
+<p>My next question:</p>
+<p><strong>Is it primarily a device for playing or amplifying music, where the screen’s visualizations are a secondary feature?</strong> (Question 17/20)</p>
+</section>
+<section id="user-18" class="level3">
+<h3 class="anchored" data-anchor-id="user-18">USER</h3>
+<p>No</p>
+</section>
+<section id="assistant-18" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-18">ASSISTANT</h3>
+<p>Okay, a non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, primarily for entertainment/media, has a screen, not primarily for passive video, not for interactive activities, not for still images/artwork, primarily displays abstract, dynamic patterns or visualizations, its display is synchronized with or influenced by audio (like music), not a standalone visualizer device, not a smart assistant/home hub, and <em>not</em> primarily a device for playing or amplifying music. (Question 17/20)</p>
+<p>This is a very specific and challenging combination! The “not primarily a music player” is a strong clue, as is the “not a standalone visualizer.” This suggests the visualizer is a prominent feature, but not the <em>sole</em> purpose, and the device isn’t just a speaker with a screen.</p>
+<p>Given all these clues, I think I have a good idea. My guess will count as a question.</p>
+<p><strong>Is it a dedicated audio spectrum analyzer or VU meter, designed as a decorative or entertainment component for a home audio system?</strong> (Question 18/20)</p>
+</section>
+<section id="user-19" class="level3">
+<h3 class="anchored" data-anchor-id="user-19">USER</h3>
+<p>No</p>
+</section>
+<section id="assistant-19" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-19">ASSISTANT</h3>
+<p>Okay, that “No” to a dedicated analyzer was very helpful in ruling out a strong candidate. (Question 18/20)</p>
+<p>Let’s recap: A non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance, primarily for entertainment/media, has a screen as its primary output, <em>not</em> for passive video, interactive activities, or still images, but <em>does</em> primarily display abstract, dynamic, audio-reactive patterns/visualizations. Crucially, it’s <em>not</em> a standalone visualizer, <em>not</em> a smart assistant/hub, <em>not</em> primarily a music player/amplifier, and <em>not</em> a dedicated audio spectrum analyzer.</p>
+<p>This is a very specific and challenging combination! The “not a standalone visualizer” combined with “primarily displays abstract patterns” means the visualizations are a prominent feature of the screen, but not the sole or primary purpose of the <em>device as a whole</em>.</p>
+<p>Given all these constraints, I have one more specific guess in mind. This will be my 19th question.</p>
+<p><strong>Is it a device designed primarily to create ambient lighting effects or mood lighting, where its screen displays these abstract, dynamic, and audio-reactive patterns as a central part of that visual experience?</strong> (Question 19/20)</p>
+</section>
+<section id="user-20" class="level3">
+<h3 class="anchored" data-anchor-id="user-20">USER</h3>
+<p>No</p>
+</section>
+<section id="assistant-20" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-20">ASSISTANT</h3>
+<p>Okay, this is a truly challenging one! That “No” to ambient lighting (Q19) was very insightful.</p>
+<p>Let’s recap the very specific set of clues: It’s a non-living, man-made, indoor, electronic thing, not typically carried, not a major appliance. It’s primarily for entertainment/media and has a screen as its primary output. This screen primarily displays abstract, dynamic patterns or visualizations that are synchronized with or influenced by audio (like music).</p>
+<p>Crucially, it is <em>not</em> primarily for passive video, interactive activities, or still images. It’s <em>not</em> a standalone visualizer, <em>not</em> a smart assistant/home hub, <em>not</em> primarily a music player/amplifier, <em>not</em> a dedicated audio spectrum analyzer, and <em>not</em> primarily a device for ambient lighting effects.</p>
+<p>This means the screen’s main job is these abstract, audio-reactive visuals, but the device itself isn’t <em>just</em> a visualizer, music player, or light. It’s a display that <em>provides</em> this unique visual entertainment.</p>
+<p>Given all these nuanced “no” answers, I have one final guess for my 20th question.</p>
+<p><strong>Is it a specialized display panel or screen, such as a large-format LED art display or a display component often found in high-end sound systems or entertainment setups, designed to dynamically visualize audio in abstract ways for aesthetic or atmospheric purposes, but not primarily for traditional video, interactive content, or music playback itself?</strong> (Question 20/20)</p>
+</section>
+<section id="user-21" class="level3">
+<h3 class="anchored" data-anchor-id="user-21">USER</h3>
+<p>No - it was Wicked 2, the film or Broadway show?</p>
+</section>
+<section id="assistant-21" class="level3">
+<h3 class="anchored" data-anchor-id="assistant-21">ASSISTANT</h3>
+<p>Ah, <strong>Wicked 2, the film or Broadway show!</strong></p>
+<p>Wow, you really stumped me on that one! That was a fantastic and very tricky “thing” to pick, especially with some of the answers that led me down a completely different path!</p>
+<p>Let’s look at where I went wrong, primarily with my interpretation of “thing” as a physical object:</p>
+<ul>
+<li><strong>“Is it electronic?” (Yes)</strong> - This was a big one! While you <em>watch</em> a film or show on electronic devices, the film/show itself (the story, the production) isn’t inherently electronic. This sent me looking for a gadget.</li>
+<li><strong>“Does it have a screen or display as its primary output?” (Yes)</strong> - Again, a film is <em>displayed</em> on a screen, but the film itself doesn’t <em>have</em> a screen. A live show’s primary output is the live performance, not a screen.</li>
+<li><strong>“Is it primarily used for displaying video content…?” (No)</strong> - This one was particularly tricky! If it’s the <em>film</em>, the answer should be yes. If it’s the <em>Broadway show</em>, then no, as the primary content is live performance. This made me think it wasn’t a traditional video medium.</li>
+<li><strong>“Does it primarily display abstract, dynamic patterns, or visualizations…?” (Yes)</strong> - This was the biggest curveball! Neither a film nor a Broadway show primarily displays abstract patterns; they display narrative, characters, sets, etc. This answer solidified my belief that I was looking for some kind of visualizer or unique display device.</li>
+</ul>
+<p>You really played those answers cleverly, making me think of a very specific type of electronic display! I was deep in the world of audio-reactive screens and visualizers.</p>
+<p>That was a brilliant choice and a very well-played game! Thanks for the fun challenge! You win this round!</p>
+</section>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">REFLECTION</h2>
+<p>So – that the LLM was actually quite far from the correct answer given no context. When I played this with my friend, she was able to guess what I was thinking but perhaps that was because I had just gone to watch the film and had told her about it. This goes to show that interaction with LLMs and automation are not going to live up to the same kind of interations with humans because it is all depdent on the concrete knowledge and memory you decide to give as an input. In human language, there are latent pieces of information that your friend may know about you that you didn’t feel the need to share but they somehow knew. It doesn’t seem like AI has that personalized touch.</p>
 
 
 </section>
