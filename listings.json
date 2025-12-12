@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/021_book4/Untitled.html",
       "/posts/016_image_generation/fisher.html",
       "/posts/017_bookupdate/book_update.html",
       "/posts/018_transparency/transparency.html",
@@ -15,6 +16,7 @@
       "/posts/009_hello/hello.html",
       "/posts/008_longResponses/longestPrompt.html",
       "/posts/007_swimming/llm_swim.html",
+      "/posts/030_imitationgame/imitation.html",
       "/posts/006_collegeadvice/college.html",
       "/posts/005_unmasking_AI/book_assignment.html",
       "/posts/004_origins_ChatGPT/origins_ChatGPT.html",
