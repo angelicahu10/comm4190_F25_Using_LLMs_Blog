@@ -8,9 +8,9 @@
 
 <meta name="author" content="Angelica Hu">
 <meta name="dcterms.date" content="2025-12-02">
-<meta name="description" content="the encoding bias">
+<meta name="description" content="Dr.&nbsp;Joy Buolamwini’s Mission">
 
-<title>A Revelation From Unmasking AI: Transparency – My Explorations With LLMs</title>
+<title>The Algorithmic Justice League – My Explorations With LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,10 +23,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -71,6 +106,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -118,16 +156,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A Revelation From Unmasking AI: Transparency</h1>
+      <h1 class="title">The Algorithmic Justice League</h1>
                   <div>
         <div class="description">
-          the encoding bias
+          Dr.&nbsp;Joy Buolamwini’s Mission
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">Prompting</div>
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Unmasking AI</div>
+                <div class="quarto-category">Living With a Book</div>
               </div>
                   </div>
   </div>
@@ -164,6 +202,35 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p><img src="AJL.png" width="250"></p>
+<p>Continuing to read Unmasking AI, by Dr.&nbsp;Joy Buolamwini, I’ve become more astonished by her work with digital social justice. By bringing to light the harms of algorithmic bias that often many choose to ignore when measuring the benefits of AI, Buolamwini is forcing companies to have some accountability for the harms that they inflict.</p>
+<p>Compiling her work to found the Algorithmic Justice League (AJL), I wanted to continue exploring her work outside of the novel. What I was lead to was her more than established webiste.</p>
+<p><img src="image1.jpg" width="100%"></p>
+<p><img src="image2.jpg" width="100%"></p>
+<p><img src="image3.jpg" width="100%"></p>
+<p>Seeing the legitmacy of her many years of work compiled into one place is extremeley inspiring. She is a prime example of how passion can take you far. One thing she mentions in her book, is how she was sometimes challenged by others to focus on doing more good than critizing what already exists. However, in critizing what exists, she does good as bringing attention to these harms is what creates true change in the digitial world.</p>
+<p>Upon entering the website, you are also guided to expore the Coded Bias film - where essentially Buolamwini puts her research or narrative into a documentary film. This is something that I would enjoy watching to supplemnt my learnings and findings of this book.</p>
+<p>By being able to capture the attention of audiences, the general public, and stakeholders, Joy Buolamwini shows the power that a single individual could have in creating change. It’s cool to see how this movement has picked up momentum just over the past decade as technology continues to advance, making these disparities that are present even more important to address. Looking at the pieces of work she mentions in her book, such as Gendered Shades or her poem in physical form is super cool to see as well. She has dedicated her life’s work to ensuring social progress.</p>
+<div id="75e1ab43-5dfc-446b-bb6b-ddf44d729e23" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> YouTubeVideo</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>YouTubeVideo(<span class="st">'QxuyfWoVV98'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/QxuyfWoVV98" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
+<div id="9de4012b-20ca-42ce-9449-a80a0b5c48b0" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> YouTubeVideo</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>YouTubeVideo(<span class="st">'TWWsW1w-BVo'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/TWWsW1w-BVo" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
 
 
 
